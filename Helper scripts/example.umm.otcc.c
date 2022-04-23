@@ -17,7 +17,6 @@ main () {
   tab = calloc(10000,40000);
   
   for (;;) {
-    z=0;
     y=0;
     x=0;
     if (f==1) {
@@ -27,11 +26,15 @@ main () {
       f++;
     }
     else if (f==3) {
-      changevalue_int(1,0);
+      x=0;
+      changevalue_int(1,x);
       f++;
     }
     else if (f==4) {
-      changevalue_int(2,-6);
+      x=2;
+      y=-3;
+      x=x*y;
+      changevalue_int(2,x);
       f++;
     }
     else if (f==5) {
@@ -39,7 +42,8 @@ main () {
     }
     else if (f==6) {
       scanf("%d", &z);
-      changevalue_int(3,z);
+      x=z;
+      changevalue_int(3,x);
       f++;
     }
     else if (f==7) {
@@ -49,15 +53,13 @@ main () {
       f++;
     }
     else if (f==9) {
-      x++;
-      x++;
+      x=2;
       printf("%d",x);
       fflush(stdout);
       f++;
     }
     else if (f==10) {
-      x--;
-      x--;
+      x=-2;
       printf("%d",x);
       fflush(stdout);
       f++;
@@ -73,8 +75,7 @@ main () {
     }
     else if (f==13) {
       x=return_int(1);
-      x++;
-      x++;
+      x=2;
       printf("%d",x);
       fflush(stdout);
       f++;
@@ -95,31 +96,13 @@ main () {
       f++;
     }
     else if (f==17) {
-      x++;
-      x++;
-      x++;
-      
-      y++;
-      y++;
-      y++;
-      
+      x=3;
+      y=3;
       x=x*y;
-      y=0;
-      
-      y++;
-      y++;
-      y++;
-      
+      y=3;
       x=x*y;
-      y=0;
-      
-      y++;
-      y++;
-      y++;
-      
+      y=3;
       x=x*y;
-      y=0;
-      
       printf("%c",x);
       fflush(stdout);
       f++;
@@ -140,37 +123,21 @@ main () {
       f++;
     }
     else if (f==21) {
-      x++;
-      x++;
-      
-      y++;
-      y++;
-      
+      x=2;
+      y=2;
       x=x*y;
-      y=0;
-      
-      y++;
-      y++;
-      
+      y=2;
       x=x*y;
-      y=0;
-      
-      y++;
-      y++;
-      y++;
-      
+      y=3;
       x=x*y;
-      y=0;
-      
       f=x-1;
-      
       f++;
     }
     else if (f==22) {
       f++;
     }
     else if (f==23) {
-      x++;
+      x=1;
       free(tab);
       return x;
       f++;
@@ -179,14 +146,13 @@ main () {
       f++;
     }
     else if (f==25) {
-      x++;
+      x=1;
       printf("%d",x);
       fflush(stdout);
       f++;
     }
     else if (f==26) {
-      x++;
-      x--;
+      x=0;
       free(tab);
       return x;
       f++;
