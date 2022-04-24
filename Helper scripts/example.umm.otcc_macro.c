@@ -13,7 +13,7 @@ r(i){p=t+i-1;k=*(char*)p;return k;}
 
 c(i,v){p=t+i-1;*(char*)p=v;return 0;}
 
-main(){f=1;t=calloc(10000,40000);for(;;){z=0;y=0;x=0;if(f==1 B
+main(){f=1;t=calloc(10000,40000);for(;;){z=0;y=0;x=0;if(f==1){
 
       A 2 B
       A 3 B
